@@ -37,5 +37,9 @@ for i in range(1, L):
     Pplus = (np.eye(3) - K @ H) @ Pminus
 
 # 绘制图像
-plt.plot(t, x, 'r', t, y[0, :], 'g', t, y[1, :], 'b', t, Xplus[0, :], 'y', linewidth=2)
+plt.plot(t, x, 'r', t, y[0, :], 'c', t, y[1, :], 'y', t, Xplus[0, :], 'b', linewidth=1.5)
+plt.plot(t, Xplus[0, :], 'b', linewidth=2.0)  # 蓝色加粗为滤波后的数据练成的曲线
+plt.title("Simple implementation of Kalman filter")
+plt.xlabel("t")
+plt.ylabel("data")
 plt.show()
